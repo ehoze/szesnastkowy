@@ -1,3 +1,8 @@
+//
+//
+//			ehoze -- zamian z dziesiętnego na szesnastkowy i na odwrót 
+//
+//
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -24,11 +29,11 @@ int zamiana (string binarna)
  
   while(liczba > 0)
   {
-     reszta[i++] = liczba % 16; //sprawdzamy reszt� z dzielenia liczby przez dwa
-     liczba /= 16; //dzielimy liczb� przez dwa, by poszuka� kolejnej cyfry binarnej
+     reszta[i++] = liczba % 16; //sprawdzamy resztê z dzielenia liczby przez dwa
+     liczba /= 16; //dzielimy liczbê przez dwa, by poszukaæ kolejnej cyfry binarnej
   }
 
-  i--; //jeste�my na kolejnej "pustej" cyfrze, wracamy do ostatniej niepustej
+  i--; //jesteœmy na kolejnej "pustej" cyfrze, wracamy do ostatniej niepustej
 
 	 	switch(reszta[i])
 	{
@@ -55,7 +60,7 @@ int zamiana (string binarna)
 		break;
 	}
 	i--;
-  while(i>=0) //wypisanie reszty od ko�ca
+  while(i>=0) //wypisanie reszty od koñca
     cout << reszta[i--];
 }
 
@@ -71,7 +76,7 @@ int power(int a, int b) {
 void plik2()
 {
 	ifstream plik2;
-    plik2.open("C:\\eryk_kucharski\\szesnastkowy\\x.txt");  
+    plik2.open("C:\\eryk_kucharski\\szesnastkowy\\x.txt");  // twoja ścieżka do pliku z którego pobierane są informacje "x"
     if(plik2.good())  
      while(!plik2.eof())        
                          {
@@ -85,7 +90,7 @@ void plik2()
 void plik3()
 {
 	ofstream plik3;              
-    plik3.open("C:\\eryk_kucharski\\szesnastkowy\\y.txt");  	
+    plik3.open("C:\\eryk_kucharski\\szesnastkowy\\y.txt");  	// twoja ścieżka do pliku wypisowego "y"
 			plik3<<wynik;	
     plik3.close(); 
 
@@ -99,9 +104,9 @@ void zamiana()
  int wynik = 0;
  int cyfra;
  bin=a;
- for(int i=bin.length()-1; i>=0; i--) { //od ko�ca do pocz�tku stringu
+ for(int i=bin.length()-1; i>=0; i--) { //od koñca do pocz¹tku stringu
  if(cyfra>='0' && cyfra<='9')
-   cyfra = bin[i] - 48; //zamiana znaku char z kodu ASCII na cyfr� int
+   cyfra = bin[i] - 48; //zamiana znaku char z kodu ASCII na cyfrê int
    else 
    cyfra=bin[i] -65;
    
